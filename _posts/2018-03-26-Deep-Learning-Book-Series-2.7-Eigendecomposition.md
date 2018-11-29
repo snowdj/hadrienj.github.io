@@ -18,8 +18,6 @@ excerpt-image: <img src="../../assets/images/2.7/unit-circle-eigenvectors.png" w
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}
-
 # Introduction
 
 We will see some major concepts of linear algebra in this chapter. We will start with getting some ideas on eigenvectors and eigenvalues. We will develop on the idea that a matrix can be seen as a linear transformation and that applying a matrix on its eigenvectors gives new vectors with the same direction. Then we will see how to express quadratic equations into the matrix form. We will see that the eigendecomposition of the matrix corresponding to a quadratic equation can be used to find the minimum and maximum of this function. As a bonus, we will also see how to visualize linear transformations in Python!
@@ -469,7 +467,7 @@ $$
 $$
 </div>
 
-We have well $\bs{A}\times 3\bs{v} = \lambda\bs{v}$ and the eigenvalue is still $\lambda=2$.
+We have well $\bs{A}\times 3\bs{v} = \lambda \times 3\bs{v}$ and the eigenvalue is still $\lambda=2$.
 
 ## Concatenating eigenvalues and eigenvectors
 
@@ -1215,9 +1213,7 @@ $$
 $$
 </div>
 
-We want to find $P$ such as our new equation (after the change of variable) doesn't contain the cross terms.
-
-The first step is to replace that in the first equation:
+We want to find $P$ such as our new equation (after the change of variable) doesn't contain the cross terms. The first step is to replace that in the first equation:
 
 <div>
 $$
@@ -1231,39 +1227,19 @@ $$
 $$
 </div>
 
-We can see that the substitution is done by replacing $\bs{A}$ with $\bs{P^\text{T}AP}$. Remember from example 2. that $\bs{A} = \bs{Q\Lambda} \bs{Q}^\text{T}$ ($\bs{\Lambda}$ is the eigenvalues of $\bs{A}$ put in a diagonal matrix):
+Can you see the how to transform the left hand side ($\bs{x}$) into the right hand side ($\bs{y}$)? The substitution is done by replacing $\bs{A}$ with $\bs{P^\text{T}AP}$. We also know that $\bs{A}$ is symmetric and thus that there is a diagonal matrix $\bs{D}$ containing the eigenvectors of $\bs{A}$ and such as $\bs{D}=\bs{P}^\text{T}\bs{AP}$. We thus end up with:
 
 <div>
 $$
-\begin{align*}
-\bs{P^\text{T}AP}
-&=
-\bs{P^\text{T}Q\Lambda Q^\text{T}P}\\\\
-&=
-\bs{P^\text{T}PQQ^\text{T}\Lambda}\\\\
-&=
-\bs{\Lambda}
-\end{align*}
+\bs{x^\text{T}Ax}=\bs{y^\text{T}\bs{D} y}
 $$
 </div>
 
-Since $\bs{P}$ and $\bs{Q}$ are orthogonal we have removed $\bs{P^\text{T}P}$ and $\bs{QQ^\text{T}}$. We finally have:
+All of this implies that we can use $\bs{D}$ to simplify our quadratic equation and remove the cross terms. If you remember from example 2 we know that the eigenvalues of $\bs{A}$ are:
 
 <div>
 $$
-\bs{x^\text{T}Ax}=\bs{y^\text{T}\Lambda y}
-$$
-</div>
-
-<span class='pquote'>
-    We can use $\bs{\Lambda}$ to simplify our quadratic equation and remove the cross terms
-</span>
-
-All of this implies that we can use $\bs{\Lambda}$ to simplify our quadratic equation and remove the cross terms. If you remember from example 2 we know that the eigenvalues of $\bs{A}$ are:
-
-<div>
-$$
-\bs{\Lambda}=
+\bs{D}=
 \begin{bmatrix}
     7 & 0\\\\
     0 & 2
@@ -1276,7 +1252,7 @@ $$
 \begin{align*}
 \bs{x^\text{T}Ax}
 &=
-\bs{y^\text{T}\Lambda y}\\\\
+\bs{y^\text{T}\bs{D} y}\\\\
 &=
 \bs{y}^\text{T}
 \begin{bmatrix}
@@ -1477,9 +1453,9 @@ $$
 f(\bs{x}) &= 7y_1^2 + 2y_2^2\\\\
 &\leq
 7y_1^2 + 7y_2^2\\\\
-&=
+&\leq
 7(y_1^2+y_2^2)\\\\
-&=
+&\leq
 7
 \end{align*}
 $$
@@ -1495,9 +1471,9 @@ $$
 f(\bs{x}) &= 7y_1^2 + 2y_2^2\\\\
 &\geq
 2y_1^2 + 2y_2^2\\\\
-&=
+&\geq
 2(y_1^2+y_2^2)\\\\
-&=
+&\geq
 2
 \end{align*}
 $$
@@ -1653,3 +1629,6 @@ In this case, the eigenvectors are not orthogonal!
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
 </span>
+
+
+{% include deep-learning-book-toc.html %}

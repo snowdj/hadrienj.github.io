@@ -3,7 +3,7 @@ bg: "flower1.jpg"
 layout: post
 mathjax: true
 title: Deep Learning Book Series · 2.8 Singular Value Decomposition
-crawlertitle: "Deep Learning Book Series · 2.8 Singular Value Decomposition"
+crawlertitle: "Introduction to Singular Value Decomposition - Deep Learning Book Series - 2.8"
 categories: posts
 tags: ['linear-algebra', 'python', 'numpy', 'deep-learning-book']
 author: hadrienj
@@ -12,13 +12,12 @@ date: 2018-03-26 16:00:00
 excerpt: We will see another way to decompose matrices, the Singular Value Decomposition or SVD. Since the beginning of this series, I emphasized the fact that you can see matrices as linear transformation in space. With the SVD, you decompose a matrix in three other matrices. You can see these new matrices as *sub-transformations* of the space. Instead of doing the transformation in one movement, we decompose it in three movements. As a bonus, we will apply the SVD to image processing. We will see the effect of SVD on an image of Lucy the goose (it is just a goose named Lucy...) so keep on reading!
 excerpt-image: <img src="../../assets/images/2.8/unit-circle-transformation1.png" width="400" alt="Plot of the unit circle and its transformation" title="Transformation of the unit circle">
     <em>The unit circle and its transformation by a matrix</em>
+metaDescription: "Introduction to the Singular Value Decomposition (SVD). We will use Python to get a practical and visual intuition of the Singular Value Decomposition."
 ---
 
 <span class='notes'>
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
-
-{% include deep-learning-book-toc.html %}
 
 # Introduction
 
@@ -1098,3 +1097,5 @@ I like this chapter on the SVD because it uses what we have learned so far in a 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
 </span>
+
+{% include deep-learning-book-toc.html %}

@@ -18,8 +18,6 @@ excerpt-image: <img src="../../assets/images/2.6/diagonal-and-symmetric-matrices
     This content is part of a series following the chapter 2 on linear algebra from the [Deep Learning Book](http://www.deeplearningbook.org/) by Goodfellow, I., Bengio, Y., and Courville, A. (2016). It aims to provide intuitions/drawings/python code on mathematical theories and is constructed as my understanding of these concepts. You can check the syllabus in the [introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/).
 </span>
 
-{% include deep-learning-book-toc.html %}
-
 # Introduction
 
 We have seen in [2.3](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-2.3-Identity-and-Inverse-Matrices/) some interesting kind of matrices. We will see other type of vectors and matrices in this chapter. It is not a big chapter but it is important to understand the next ones.
@@ -50,9 +48,9 @@ $$
 $$
 </div>
 
-In this case the matrix is also square but there can be non square diagonal matrices.
-
 ### Example 2.
+
+In this case the matrix is also square but there can be non square diagonal matrices.
 
 <div>
 $$
@@ -79,9 +77,9 @@ $$
 $$
 </div>
 
-The diagonal matrix can be denoted $diag(\bs{v})$ where $\bs{v}$ is the vector containing the diagonal values.
-
 ### Example 3.
+
+The diagonal matrix can be denoted $diag(\bs{v})$ where $\bs{v}$ is the vector containing the diagonal values.
 
 <div>
 $$
@@ -124,10 +122,9 @@ array([[2, 0, 0, 0],
        [0, 0, 0, 1]])
 </pre>
 
+### Example 4.
 
 The mutliplication between a diagonal matrix and a vector is thus just a ponderation of each element of the vector by $v$:
-
-### Example 4.
 
 <div>
 $$
@@ -188,9 +185,9 @@ $$
 $$
 </div>
 
-Non square matrices have the same properties:
-
 ### Example 5.
+
+Non square matrices have the same properties:
 
 <div>
 $$
@@ -816,8 +813,10 @@ In the next chapter we will saw a central idea in linear algebra: the eigendecom
 
 - [https://math.stackexchange.com/questions/1936020/why-is-the-inverse-of-an-orthogonal-matrix-equal-to-its-transpose](https://math.stackexchange.com/questions/1936020/why-is-the-inverse-of-an-orthogonal-matrix-equal-to-its-transpose)
 
-- [https://dyinglovegrape.wordpress.com/2010/11/30/the-inverse-of-an-orthogonal-matrix-is-its-transpose/](https://math.stackexchange.com/questions/1936020/why-is-the-inverse-of-an-orthogonal-matrix-equal-to-its-transpose)
+- [https://dyinglovegrape.wordpress.com/2010/11/30/the-inverse-of-an-orthogonal-matrix-is-its-transpose/](https://dyinglovegrape.wordpress.com/2010/11/30/the-inverse-of-an-orthogonal-matrix-is-its-transpose/)
 
 <span class='notes'>
     Feel free to drop me an email or a comment. The syllabus of this series can be found [in the introduction post](https://hadrienj.github.io/posts/Deep-Learning-Book-Series-Introduction/). All the notebooks can be found on [Github](https://github.com/hadrienj/deepLearningBook-Notes).
 </span>
+
+{% include deep-learning-book-toc.html %}
